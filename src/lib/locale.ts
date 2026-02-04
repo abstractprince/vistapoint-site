@@ -1,8 +1,9 @@
+// src/lib/locale.ts
 import { locales } from "@/config/site";
 
 /**
- * Supported locale codes derived from config.
- * Example: ["en", "ru"] as const  -> Locale becomes "en" | "ru"
+ * Locales list must be declared in "@/config/site" like:
+ * export const locales = ["en", "ru"] as const;
  */
 export type Locale = (typeof locales)[number];
 
@@ -17,28 +18,29 @@ export function isLocale(value: string): value is Locale {
  * "/" -> "/en"
  * "/products" -> "/en/products"
  */
-export function localePath(locale: Locale, path: string = "/") {
-  if (path === "/" || path === "") return `/${locale}`;
+export function localePath(locale: Locale, path: string = "/"): string {
+  if (!path || path === "/") return `/${locale}`;
   const p = path.startsWith("/") ? path : `/${path}`;
   return `/${locale}${p}`;
 }
 
 /**
  * Replace (or insert) locale segment at the start of a pathname.
- * "/en/products" + "ru" -> "/ru/products"
- * "/products" + "en" -> "/en/products"
+ * "/en/products" -> "/ru/products"
+ * "/products" -> "/en/products"
  */
-export function replaceLocaleInPathname(pathname: string, nextLocale: Locale) {
-  const segments = pathname.split("/").filter(Boolean);
+export function replaceLocaleInPathname(
+  pathname: string,
+  nextLocale: Locale
+): string {
+  const clean = pathname.startsWith("/") ? pathname : `/${pathname}`;
+  const segments = clean.split("/").filter(Boolean);
 
   if (segments.length === 0) return `/${nextLocale}`;
 
   const [first, ...rest] = segments;
-
-  // If first segment is a supported locale, replace it; otherwise prepend locale.
-  if ((locales as readonly string[]).includes(first)) {
+  if (isLocale(first)) {
     return `/${nextLocale}/${rest.join("/")}`.replace(/\/$/, "");
   }
-
   return `/${nextLocale}/${segments.join("/")}`.replace(/\/$/, "");
 }
