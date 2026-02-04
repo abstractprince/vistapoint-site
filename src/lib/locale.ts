@@ -1,10 +1,7 @@
 // src/lib/locale.ts
+
 import { locales } from "@/config/site";
 
-/**
- * Locales list must be declared in "@/config/site" like:
- * export const locales = ["en", "ru"] as const;
- */
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "en";
@@ -14,20 +11,20 @@ export function isLocale(value: string): value is Locale {
 }
 
 /**
- * Build a locale-aware path.
+ * Build a locale-aware path:
  * "/" -> "/en"
  * "/products" -> "/en/products"
  */
 export function localePath(locale: Locale, path: string = "/"): string {
-  if (!path || path === "/") return `/${locale}`;
+  if (path === "/" || path === "") return `/${locale}`;
   const p = path.startsWith("/") ? path : `/${path}`;
   return `/${locale}${p}`;
 }
 
 /**
- * Replace (or insert) locale segment at the start of a pathname.
- * "/en/products" -> "/ru/products"
- * "/products" -> "/en/products"
+ * Replace (or insert) locale segment at the start of a pathname:
+ * "/en/products" + "ru" -> "/ru/products"
+ * "/products" + "en" -> "/en/products"
  */
 export function replaceLocaleInPathname(
   pathname: string,
@@ -39,8 +36,10 @@ export function replaceLocaleInPathname(
   if (segments.length === 0) return `/${nextLocale}`;
 
   const [first, ...rest] = segments;
+
   if (isLocale(first)) {
-    return `/${nextLocale}/${rest.join("/")}`.replace(/\/$/, "");
+    return `/${[nextLocale, ...rest].join("/")}`;
   }
-  return `/${nextLocale}/${segments.join("/")}`.replace(/\/$/, "");
+
+  return `/${[nextLocale, ...segments].join("/")}`;
 }
