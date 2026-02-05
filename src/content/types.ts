@@ -63,11 +63,36 @@ export type LocaleContent = {
   };
   about: {
     title: string;
-    mission: string;
-    vision: string;
-    whyChoose: string;
-    values: { title: string; description: string }[];
-    cta: string;
+    subtitle: string;
+    whoWeAreTitle: string;
+    whoWeAreBody: string;
+    whatWeDoTitle: string;
+    whatWeDoBody: string;
+    howWeWorkTitle: string;
+    howWeWorkItems: string[];
+    whatToExpectTitle: string;
+    whatToExpectItems: string[];
+    ctaLine: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+  };
+  whyUs: {
+    title: string;
+    intro: string;
+    blocks: { title: string; body: string }[];
+    listTitle: string;
+    listItems: string[];
+    ctaLine: string;
+    ctaButton: string;
+  };
+  vision: {
+    title: string;
+    intro: string;
+    blocks: { title: string; body: string }[];
+    principlesTitle: string;
+    principles: string[];
+    ctaPrimary: string;
+    ctaSecondary: string;
   };
   contact: {
     title: string;

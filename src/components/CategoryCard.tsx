@@ -20,7 +20,7 @@ export function CategoryCard({
   return (
     <Link
       href={href}
-      className="group flex h-full flex-col rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-card)] p-5 transition hover:border-[var(--vp-text)]"
+      className="group flex h-full flex-col rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-card)] p-5 transition duration-200 hover:-translate-y-0.5 hover:border-[var(--vp-text)] hover:shadow-sm"
     >
       <ImagePlaceholder label={imageLabel} width={4} height={3} className="rounded-[var(--vp-radius)]" />
       <div className="mt-4 flex flex-1 flex-col">

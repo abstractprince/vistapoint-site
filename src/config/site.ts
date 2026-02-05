@@ -21,9 +21,9 @@ export const categoryItems = [
 
 export const footerLinks = {
   company: [
-    { key: "aboutUs", href: "#" },
-    { key: "whyUs", href: "#" },
-    { key: "ourVision", href: "#" },
+    { key: "aboutUs", href: "/about-us" },
+    { key: "whyUs", href: "/why-us" },
+    { key: "ourVision", href: "/our-vision" },
     { key: "ourBrands", href: "#" }
   ] as const,
   social: [

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --vp-bg: #f3f5f8;
-  --vp-bg-muted: #f3f5f8;
+  --vp-bg: #ffffff;
+  --vp-bg-muted: #f7f8fa;
   --vp-text: #0b0f14;
   --vp-muted: #5b6472;
   --vp-border: #d8dde6;
@@ -31,5 +31,5 @@ a {
 }
 
 .section-spacing {
-  @apply py-16 md:py-20;
+  @apply py-12 md:py-16;
 }

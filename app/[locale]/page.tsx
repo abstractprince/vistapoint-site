@@ -43,12 +43,12 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
         </div>
       </section>
 
-      <section className="section-spacing">
+      <section className="section-spacing relative">
         <div className="container-base">
-          <h2 className="text-2xl font-semibold text-[var(--vp-text)]">
+          <h2 className="text-center text-2xl font-semibold text-[var(--vp-text)] md:absolute md:left-1/2 md:-translate-x-1/2">
             {content.home.categories.title}
           </h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 pt-8 sm:grid-cols-2 md:pt-12 lg:grid-cols-3">
             {categoryItems.map((item) => (
               <CategoryCard
                 key={item.key}
@@ -79,7 +79,7 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
       </section>
 
       <section className="section-spacing">
-        <div className="container-base flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+        <div className="container-base flex flex-col items-center justify-center gap-3 text-center md:flex-row md:gap-4">
           <h2 className="text-2xl font-semibold text-[var(--vp-text)]">
             {content.home.cta.title}
           </h2>

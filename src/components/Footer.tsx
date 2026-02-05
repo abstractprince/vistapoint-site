@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/config/site";
 import { footerLinks } from "@/config/site";
 import { getContent } from "@/content";
+import { localePath } from "@/lib/locale";
 
 export function Footer({ locale }: { locale: Locale }) {
   const content = getContent(locale);
@@ -20,7 +21,7 @@ export function Footer({ locale }: { locale: Locale }) {
           <ul className="mt-4 space-y-2 text-sm text-[var(--vp-muted)]">
             {footerLinks.company.map((item) => (
               <li key={item.key}>
-                <Link href={item.href} className="hover:text-[var(--vp-text)]">
+                <Link href={item.href.startsWith("/") ? localePath(locale, item.href) : item.href} className="hover:text-[var(--vp-text)]">
                   {content.footer.links[item.key]}
                 </Link>
               </li>
