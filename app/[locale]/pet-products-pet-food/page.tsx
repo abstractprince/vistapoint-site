@@ -8,7 +8,7 @@ export default function PetPage({ params }: { params: { locale: Locale } }) {
   return (
     <CategoryPageTemplate
       locale={params.locale}
-      title={content.categoryPages.pet.pageTitle}
+      title={content.categoryPages.pet.title}
       intro={content.categoryPages.pet.intro}
     />
   );

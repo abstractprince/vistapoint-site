@@ -8,7 +8,7 @@ export default function PanelsPage({ params }: { params: { locale: Locale } }) {
   return (
     <CategoryPageTemplate
       locale={params.locale}
-      title={content.categoryPages.panels.pageTitle}
+      title={content.categoryPages.panels.title}
       intro={content.categoryPages.panels.intro}
     />
   );

@@ -8,7 +8,7 @@ export default function FlooringPage({ params }: { params: { locale: Locale } })
   return (
     <CategoryPageTemplate
       locale={params.locale}
-      title={content.categoryPages.flooring.pageTitle}
+      title={content.categoryPages.flooring.title}
       intro={content.categoryPages.flooring.intro}
       paletteLabel={content.categoryPages.flooring.paletteLabel}
       productLabel={content.categoryPages.flooring.productLabel}
