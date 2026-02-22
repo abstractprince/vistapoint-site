@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ImagePlaceholder } from "@/components/ImagePlaceholder";
 import { CategoryCard } from "@/components/CategoryCard";
 import { categoryItems } from "@/config/site";
 import { getContent } from "@/content";
@@ -18,6 +18,7 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
           <p className="mt-4 max-w-2xl text-base text-[var(--vp-muted)]">
             {content.home.hero.subtitle}
           </p>
+
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link
               href={localePath(params.locale, "/products")}
@@ -25,6 +26,7 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
             >
               {content.home.hero.primaryCta}
             </Link>
+
             <Link
               href={localePath(params.locale, "/contact")}
               className="rounded-full border border-[var(--vp-border)] px-6 py-3 text-sm font-semibold text-[var(--vp-text)]"
@@ -32,12 +34,15 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
               {content.home.hero.secondaryCta}
             </Link>
           </div>
-          <div className="mt-10 w-full max-w-[1080px] overflow-hidden rounded-[var(--vp-radius)] border border-[var(--vp-border)]">
-            <ImagePlaceholder
-              label={content.home.hero.heroLabel}
-              width={16}
-              height={7}
-              className="min-h-[260px] rounded-[var(--vp-radius)] md:min-h-[420px]"
+
+          <div className="relative mt-10 w-full max-w-[1080px] overflow-hidden rounded-[var(--vp-radius)] border border-[var(--vp-border)]">
+            <Image
+              src="/images/hero/hero-v2.webp"
+              alt="Vista Point hero"
+              fill
+              priority
+              sizes="(max-width: 1080px) 100vw, 1080px"
+              className="object-cover min-h-[260px] md:min-h-[420px]"
             />
           </div>
         </div>
@@ -48,6 +53,7 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
           <h2 className="text-center text-2xl font-semibold text-[var(--vp-text)] md:absolute md:left-1/2 md:-translate-x-1/2">
             {content.home.categories.title}
           </h2>
+
           <div className="grid gap-6 pt-8 sm:grid-cols-2 md:pt-12 lg:grid-cols-3">
             {categoryItems.map((item) => (
               <CategoryCard
@@ -83,6 +89,7 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
           <h2 className="text-2xl font-semibold text-[var(--vp-text)]">
             {content.home.cta.title}
           </h2>
+
           <Link
             href={localePath(params.locale, "/contact")}
             className="rounded-full bg-[var(--vp-text)] px-6 py-3 text-sm font-semibold text-white"
