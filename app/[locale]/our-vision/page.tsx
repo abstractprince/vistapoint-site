@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getContent } from "@/src/content";
-import { localePath, type Locale } from "@/src/lib/locale";
+import { getContent } from "@/content";
+import { localePath, type Locale } from "@/lib/locale";
 
 export default function OurVisionPage({ params }: { params: { locale: Locale } }) {
   const content = getContent(params.locale);
