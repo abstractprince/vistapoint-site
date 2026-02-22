@@ -1,5 +1,15 @@
 import type { Locale } from "@/config/site";
 
+export type WhyUsContent = {
+  title: string;
+  intro: string;
+  blocks: { title: string; body: string }[];
+  listTitle: string;
+  listItems: string[];
+  ctaLine: string;
+  ctaButton: string;
+};
+
 export type LocaleContent = {
   locale: Locale;
   languageLabel: string;
@@ -68,29 +78,11 @@ export type LocaleContent = {
     whyChoose: string;
     values: { title: string; description: string }[];
     cta: string;
-    subtitle: string;
-    whoWeAreTitle: string;
-    whoWeAreBody: string;
-    whatWeDoTitle: string;
-    whatWeDoBody: string;
-    howWeWorkTitle: string;
-    howWeWorkItems: string[];
-    whatToExpectTitle: string;
-    whatToExpectItems: string[];
-    ctaLine: string;
-    ctaPrimary: string;
-    ctaSecondary: string;
   };
+
+  // ✅ Добавить это поле, иначе падает /[locale]/why-us
   whyUs: WhyUsContent;
-  vision: {
-    title: string;
-    intro: string;
-    blocks: { title: string; body: string }[];
-    principlesTitle: string;
-    principles: string[];
-    ctaPrimary: string;
-    ctaSecondary: string;
-  };
+
   contact: {
     title: string;
     lead: string;
@@ -119,16 +111,6 @@ export type LocaleContent = {
 export type CategoryCopy = {
   title: string;
   description: string;
-};
-
-export type WhyUsContent = {
-  title: string;
-  intro: string;
-  blocks: { title: string; body: string }[];
-  listTitle: string;
-  listItems: string[];
-  ctaLine: string;
-  ctaButton: string;
 };
 
 export type CategoryPage = {

@@ -40,15 +40,15 @@ export const en: LocaleContent = {
       title: "Product categories",
       items: {
         cooling: {
-          title: "Cooling",
+          title: "Cooling — Air Conditioners",
           description: "Energy-efficient systems tailored for commercial environments."
         },
         bathroom: {
-          title: "Bathroom Solutions",
+          title: "Bathroom — Ceramic Toilets & Basins",
           description: "Durable fixtures engineered for high-traffic facilities."
         },
         kitchen: {
-          title: "Kitchen Solutions",
+          title: "Kitchen Cabinets",
           description: "Modern storage solutions with dependable finishes."
         },
         flooring: {
@@ -60,7 +60,7 @@ export const en: LocaleContent = {
           description: "Architectural wall and ceiling panels with clean lines."
         },
         pet: {
-          title: "Pet Products",
+          title: "Pet Products — Pet Food",
           description: "Trusted nutrition and accessories for pet-focused brands."
         }
       }
@@ -80,7 +80,7 @@ export const en: LocaleContent = {
       }
     ],
     cta: {
-      title: "Request a quote?",
+      title: "Request a quote",
       button: "Contact Us"
     }
   },
@@ -135,32 +135,9 @@ export const en: LocaleContent = {
         description: "Continuous improvement in sourcing and logistics practices."
       }
     ],
-    cta: "Contact Us",
-    subtitle:
-      "We help growing businesses source reliable products across key building and lifestyle categories — with clear communication, consistent quality, and dependable delivery.",
-    whoWeAreTitle: "Who we are",
-    whoWeAreBody:
-      "Vista Point is a business-to-business supplier focused on practical, modern solutions for commercial and residential projects. We combine category expertise with a straightforward process — so you can select products faster, reduce risk, and keep projects moving.",
-    whatWeDoTitle: "What we do",
-    whatWeDoBody:
-      "We support procurement across multiple product groups, from cooling systems and bathroom solutions to kitchen solutions, flooring, panels, and selected pet products. Whether you need a single category or a complete bundle, we help align specifications, finishes, and logistics to your requirements.",
-    howWeWorkTitle: "How we work",
-    howWeWorkItems: [
-      "Curated product options that fit the scope of your project",
-      "Vendor and quality checks before delivery",
-      "Transparent timelines and responsive support",
-      "Documentation-ready communication for teams and stakeholders"
-    ],
-    whatToExpectTitle: "What you can expect",
-    whatToExpectItems: [
-      "Quality-focused sourcing",
-      "Reliable supply planning",
-      "Specialist guidance from inquiry to delivery"
-    ],
-    ctaLine: "Tell us what you’re sourcing — we’ll respond with options and next steps.",
-    ctaPrimary: "View Products",
-    ctaSecondary: "Contact Us"
+    cta: "Contact Us"
   },
+
   whyUs: {
     title: "Why Vista Point",
     intro:
@@ -168,54 +145,37 @@ export const en: LocaleContent = {
     blocks: [
       {
         title: "Quality-first selection",
-        body: "We vet product options for performance, finish consistency, and suitability for real-world use — so decisions are easier and outcomes are predictable."
+        body:
+          "We vet product options for performance, finish consistency, and suitability for real-world use — so decisions are easier and outcomes are predictable."
       },
       {
         title: "Reliable supply, fewer surprises",
-        body: "We prioritize stable sourcing and clear timelines. If something changes, you’ll know early — with alternatives that keep your project on track."
+        body:
+          "We prioritize stable sourcing and clear timelines. If something changes, you’ll know early — with alternatives that keep your project on track."
       },
       {
         title: "Expert support, not sales pressure",
-        body: "You get practical guidance on specifications, compatibility, and trade-offs — without pushing you into the wrong choice."
+        body:
+          "You get practical guidance on specifications, compatibility, and trade-offs — without pushing you into the wrong choice."
       },
       {
         title: "One partner across categories",
-        body: "Cooling, bathroom solutions, kitchen solutions, flooring, panels, and more — organized through one process, one point of contact."
+        body:
+          "Cooling, bathroom solutions, kitchen solutions, flooring, panels, and more — organized through one process, one point of contact."
       }
     ],
     listTitle: "What this means for you",
-    listItems: ["Faster decisions", "Clearer specifications", "More dependable delivery", "Less coordination overhead"],
-    ctaLine: "Request a quote or ask for product options. We’ll reply with the next steps.",
+    listItems: [
+      "Faster decisions",
+      "Clearer specifications",
+      "More dependable delivery",
+      "Less coordination overhead"
+    ],
+    ctaLine:
+      "Request a quote or ask for product options — we’ll reply with the next steps.",
     ctaButton: "Contact Us"
   },
-  vision: {
-    title: "Our Vision",
-    intro:
-      "To make B2B sourcing simpler: fewer delays, clearer choices, and products that match expectations when they arrive.",
-    blocks: [
-      {
-        title: "Built for modern procurement",
-        body: "We believe sourcing should be transparent and structured — with clear specifications, consistent communication, and documentation-ready workflows."
-      },
-      {
-        title: "Consistency across categories",
-        body: "From technical systems to finish materials, we aim to provide cohesive product selections that work together — aesthetically and operationally."
-      },
-      {
-        title: "Partnership over transactions",
-        body: "Our goal is to support long-term supply needs: growing companies, expanding operations, and teams that need a dependable partner."
-      }
-    ],
-    principlesTitle: "Principles",
-    principles: [
-      "Clarity over complexity",
-      "Reliability over promises",
-      "Quality that scales",
-      "Support that stays responsive"
-    ],
-    ctaPrimary: "View Products",
-    ctaSecondary: "Contact Us"
-  },
+
   contact: {
     title: "Contact Us",
     lead: "Tell us about your project and we will respond promptly.",
@@ -229,11 +189,11 @@ export const en: LocaleContent = {
   },
   categoryPages: {
     cooling: {
-      title: "Air Conditioners",
+      title: "Cooling — Air Conditioners",
       intro: "Commercial-grade systems engineered for consistent indoor comfort."
     },
     bathroom: {
-      title: "Bathroom Solutions",
+      title: "Bathroom — Ceramic Toilets & Basins",
       intro: "Reliable ceramics and fittings designed for everyday durability."
     },
     kitchen: {
