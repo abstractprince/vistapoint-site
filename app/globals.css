@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vp-bg: #ffffff;
+  --vp-bg-muted: #f7f8fa;
+  --vp-text: #0b0f14;
+  --vp-muted: #5b6472;
+  --vp-border: #d8dde6;
+  --vp-card: #ffffff;
+  --vp-radius: 18px;
+  --vp-blue: #0b5fff;
+}
+
+body {
+  @apply bg-[var(--vp-bg)] text-[var(--vp-text)] overflow-x-hidden;
+  font-feature-settings: "ss01";
+}
+
+::selection {
+  background: color-mix(in srgb, var(--vp-blue) 20%, white);
+}
+
+a {
+  @apply text-[var(--vp-text)];
+}
+
+.container-base {
+  @apply mx-auto w-full max-w-6xl px-4;
+}
+
+.section-spacing {
+  @apply py-12 md:py-16;
+}
