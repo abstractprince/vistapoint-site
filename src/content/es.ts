@@ -137,6 +137,45 @@ export const es: LocaleContent = {
     ],
     cta: "Contactar"
   },
+
+  whyUs: {
+    title: "Por qué Vista Point",
+    intro:
+      "Cuando abastece varias categorías, el costo de la incertidumbre es alto. Nos enfocamos en lo esencial que protege su cronograma: calidad, claridad y fiabilidad.",
+    blocks: [
+      {
+        title: "Selección con foco en calidad",
+        body:
+          "Evaluamos opciones por rendimiento, consistencia de acabados y adecuación al uso real — para decisiones más simples y resultados previsibles."
+      },
+      {
+        title: "Suministro confiable, menos sorpresas",
+        body:
+          "Priorizamos abastecimiento estable y plazos claros. Si algo cambia, lo sabrá a tiempo — con alternativas que mantienen su proyecto en marcha."
+      },
+      {
+        title: "Soporte experto, sin presión comercial",
+        body:
+          "Recibe orientación práctica sobre especificaciones, compatibilidad y trade-offs — sin empujarle a una elección equivocada."
+      },
+      {
+        title: "Un socio para varias categorías",
+        body:
+          "Climatización, soluciones para baño, cocina, pisos, paneles y más — organizado con un solo proceso y un único punto de contacto."
+      }
+    ],
+    listTitle: "Qué significa para usted",
+    listItems: [
+      "Decisiones más rápidas",
+      "Especificaciones más claras",
+      "Entregas más predecibles",
+      "Menos carga de coordinación"
+    ],
+    ctaLine:
+      "Solicite una cotización o pida opciones de producto — responderemos con los próximos pasos.",
+    ctaButton: "Contactar"
+  },
+
   contact: {
     title: "Contacto",
     lead: "Cuéntenos sobre su proyecto y responderemos pronto.",

@@ -1,5 +1,15 @@
 import type { Locale } from "@/config/site";
 
+export type WhyUsContent = {
+  title: string;
+  intro: string;
+  blocks: { title: string; body: string }[];
+  listTitle: string;
+  listItems: string[];
+  ctaLine: string;
+  ctaButton: string;
+};
+
 export type LocaleContent = {
   locale: Locale;
   languageLabel: string;
@@ -69,6 +79,10 @@ export type LocaleContent = {
     values: { title: string; description: string }[];
     cta: string;
   };
+
+  // ✅ Добавить это поле, иначе падает /[locale]/why-us
+  whyUs: WhyUsContent;
+
   contact: {
     title: string;
     lead: string;

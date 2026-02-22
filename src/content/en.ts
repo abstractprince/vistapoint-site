@@ -137,6 +137,45 @@ export const en: LocaleContent = {
     ],
     cta: "Contact Us"
   },
+
+  whyUs: {
+    title: "Why Vista Point",
+    intro:
+      "When you’re sourcing across multiple categories, the cost of uncertainty is high. We focus on the basics that protect your timeline: quality, clarity, and reliability.",
+    blocks: [
+      {
+        title: "Quality-first selection",
+        body:
+          "We vet product options for performance, finish consistency, and suitability for real-world use — so decisions are easier and outcomes are predictable."
+      },
+      {
+        title: "Reliable supply, fewer surprises",
+        body:
+          "We prioritize stable sourcing and clear timelines. If something changes, you’ll know early — with alternatives that keep your project on track."
+      },
+      {
+        title: "Expert support, not sales pressure",
+        body:
+          "You get practical guidance on specifications, compatibility, and trade-offs — without pushing you into the wrong choice."
+      },
+      {
+        title: "One partner across categories",
+        body:
+          "Cooling, bathroom solutions, kitchen solutions, flooring, panels, and more — organized through one process, one point of contact."
+      }
+    ],
+    listTitle: "What this means for you",
+    listItems: [
+      "Faster decisions",
+      "Clearer specifications",
+      "More dependable delivery",
+      "Less coordination overhead"
+    ],
+    ctaLine:
+      "Request a quote or ask for product options — we’ll reply with the next steps.",
+    ctaButton: "Contact Us"
+  },
+
   contact: {
     title: "Contact Us",
     lead: "Tell us about your project and we will respond promptly.",
