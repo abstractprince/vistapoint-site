@@ -15,6 +15,7 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
           <h1 className="text-3xl font-semibold text-[var(--vp-text)] md:text-4xl">
             {content.home.hero.title}
           </h1>
+
           <p className="mt-4 max-w-2xl text-base text-[var(--vp-muted)]">
             {content.home.hero.subtitle}
           </p>
@@ -35,14 +36,15 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
             </Link>
           </div>
 
-          <div className="relative mt-10 w-full max-w-[1080px] overflow-hidden rounded-[var(--vp-radius)] border border-[var(--vp-border)]">
+          {/* HERO IMAGE */}
+          <div className="relative mt-10 w-full max-w-[1080px] min-h-[260px] md:min-h-[420px] overflow-hidden rounded-[var(--vp-radius)] border border-[var(--vp-border)]">
             <Image
               src="/images/hero/hero-v2.webp"
               alt="Vista Point hero"
               fill
               priority
               sizes="(max-width: 1080px) 100vw, 1080px"
-              className="object-cover min-h-[260px] md:min-h-[420px]"
+              className="object-cover"
             />
           </div>
         </div>
@@ -76,7 +78,9 @@ export default function HomePage({ params }: { params: { locale: Locale } }) {
                 key={item.title}
                 className="rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-card)] p-6"
               >
-                <h3 className="text-lg font-semibold text-[var(--vp-text)]">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-[var(--vp-text)]">
+                  {item.title}
+                </h3>
                 <p className="mt-3 text-sm text-[var(--vp-muted)]">{item.description}</p>
               </div>
             ))}
