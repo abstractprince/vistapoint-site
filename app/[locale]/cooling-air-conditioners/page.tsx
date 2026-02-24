@@ -43,9 +43,9 @@ export default function CoolingPage({ params }: { params: { locale: Locale } }) 
             </Link>
           </div>
 
-          {/* HERO */}
-          <div className="mt-10 overflow-hidden rounded-[var(--vp-radius)] border border-[var(--vp-border)]">
-            <div className="relative min-h-[260px] md:min-h-[420px]">
+          {/* HERO (как в скелете: большой блок) */}
+          <div className="mt-10 overflow-hidden rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-card)]">
+            <div className="relative min-h-[320px] md:min-h-[520px]">
               <Image
                 src={HERO_SRC}
                 alt={page.pageTitle}
@@ -59,46 +59,40 @@ export default function CoolingPage({ params }: { params: { locale: Locale } }) 
         </div>
       </section>
 
-      {/* GALLERY */}
+      {/* BENEFITS (оставляем как в скелете) */}
       <section className="section-spacing">
         <div className="container-base">
-          <h2 className="text-2xl font-semibold text-[var(--vp-text)]">
-            {content.categoryPages.galleryLabel}
-          </h2>
-
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {GALLERY.map((src, idx) => (
-              <div
-                key={src}
-                className="overflow-hidden rounded-[var(--vp-radius)] border border-[var(--vp-border)]"
-              >
-                <div className="relative min-h-[180px]">
-                  <Image
-                    src={src}
-                    alt={`${page.pageTitle} — gallery ${idx + 1}`}
-                    fill
-                    sizes="(max-width: 640px) 100vw, 25vw"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* BENEFITS */}
-      <section className="section-spacing">
-        <div className="container-base">
-          <h2 className="text-2xl font-semibold text-[var(--vp-text)]">Benefits</h2>
+          <h2 className="text-xl font-semibold text-[var(--vp-text)]">Benefits</h2>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {content.categoryPages.benefits.map((b) => (
               <div
                 key={b}
-                className="rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-card)] p-6"
+                className="rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-card)] p-4"
               >
                 <p className="text-sm font-semibold text-[var(--vp-text)]">{b}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* GALLERY (как в скелете: 2×2 крупные карточки) */}
+          <h2 className="mt-10 text-xl font-semibold text-[var(--vp-text)]">Gallery</h2>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {GALLERY.map((src, idx) => (
+              <div
+                key={src}
+                className="overflow-hidden rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-card)]"
+              >
+                <div className="relative min-h-[260px] md:min-h-[360px]">
+                  <Image
+                    src={src}
+                    alt={`${page.pageTitle} — gallery ${idx + 1}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             ))}
           </div>
