@@ -8,7 +8,7 @@ export default function CoolingPage({ params }: { params: { locale: Locale } }) 
   return (
     <CategoryPageTemplate
       locale={params.locale}
-      title={content.categoryPages.cooling.title}
+      title={content.categoryPages.cooling.pageTitle}
       intro={content.categoryPages.cooling.intro}
     />
   );

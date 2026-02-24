@@ -17,7 +17,7 @@ export function ImagePlaceholder({
   return (
     <div
       className={[
-        "w-full overflow-hidden rounded border border-slate-200 bg-slate-100 text-slate-500",
+        "w-full overflow-hidden rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-bg-muted)] text-[var(--vp-muted)]",
         className
       ]
         .filter(Boolean)

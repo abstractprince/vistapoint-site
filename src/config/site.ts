@@ -1,4 +1,6 @@
-export const locales = ["en", "ru", "es"] as const;
+import { locales } from "@/lib/locale";
+
+export { locales };
 export type Locale = (typeof locales)[number];
 
 export const navItems = [
@@ -19,14 +21,14 @@ export const categoryItems = [
 
 export const footerLinks = {
   company: [
-    { key: "aboutUs", href: "#" },
-    { key: "whyUs", href: "#" },
-    { key: "ourVision", href: "#" },
+    { key: "aboutUs", href: "/about-us" },
+    { key: "whyUs", href: "/why-us" },
+    { key: "ourVision", href: "/our-vision" },
     { key: "ourBrands", href: "#" }
-  ],
+  ] as const,
   social: [
     { key: "facebook", href: "#" },
     { key: "instagram", href: "#" },
     { key: "youtube", href: "#" }
-  ]
-};
+  ] as const
+} as const;

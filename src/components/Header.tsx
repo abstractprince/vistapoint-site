@@ -30,9 +30,9 @@ export function Header({ locale }: { locale: Locale }) {
   const currentLanguageLabel = getContent(locale).languageLabel;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-[var(--vp-bg)]/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-[var(--vp-border)] bg-[var(--vp-bg)]/95 backdrop-blur">
       <div className="container-base flex h-16 items-center justify-between gap-4">
-        <Link href={localePath(locale, "/")} className="text-lg font-semibold">
+        <Link href={localePath(locale, "/")} className="text-lg font-semibold text-[var(--vp-text)]">
           Vista Point®
         </Link>
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
@@ -40,7 +40,7 @@ export function Header({ locale }: { locale: Locale }) {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-slate-700 transition hover:text-[var(--vp-blue)]"
+              className="text-sm font-medium text-[var(--vp-muted)] transition hover:text-[var(--vp-text)]"
             >
               {item.label}
             </Link>
@@ -50,7 +50,7 @@ export function Header({ locale }: { locale: Locale }) {
           <div className="relative">
             <button
               type="button"
-              className="flex items-center gap-2 rounded-full border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-700 transition hover:border-[var(--vp-blue)]"
+              className="flex items-center gap-2 rounded-full border border-[var(--vp-border)] px-3 py-1.5 text-xs font-semibold text-[var(--vp-muted)] transition hover:border-[var(--vp-text)]"
               aria-haspopup="listbox"
               aria-expanded={langOpen}
               onClick={() => setLangOpen((open) => !open)}
@@ -60,14 +60,14 @@ export function Header({ locale }: { locale: Locale }) {
             </button>
             {langOpen ? (
               <ul
-                className="absolute right-0 mt-2 w-20 rounded-xl border border-slate-200 bg-white p-1 shadow-lg"
+                className="absolute right-0 mt-2 w-20 rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-card)] p-1 shadow-lg"
                 role="listbox"
               >
                 {languageOptions.map((option) => (
                   <li key={option.value}>
                     <Link
                       href={replaceLocaleInPathname(pathname, option.value)}
-                      className="block rounded-lg px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-100"
+                      className="block rounded-lg px-3 py-2 text-xs font-semibold text-[var(--vp-muted)] hover:bg-[var(--vp-bg-muted)]"
                       onClick={() => setLangOpen(false)}
                     >
                       {option.label}
@@ -79,7 +79,7 @@ export function Header({ locale }: { locale: Locale }) {
           </div>
           <button
             type="button"
-            className="flex items-center rounded-md border border-slate-200 p-2 text-slate-700 md:hidden"
+            className="flex items-center rounded-md border border-[var(--vp-border)] p-2 text-[var(--vp-muted)] md:hidden"
             aria-label="Toggle menu"
             aria-controls="mobile-navigation"
             aria-expanded={mobileOpen}
@@ -91,13 +91,13 @@ export function Header({ locale }: { locale: Locale }) {
         </div>
       </div>
       {mobileOpen ? (
-        <div id="mobile-navigation" className="border-t border-slate-200 bg-white md:hidden">
+        <div id="mobile-navigation" className="border-t border-[var(--vp-border)] bg-[var(--vp-bg)] md:hidden">
           <nav className="container-base flex flex-col gap-4 py-4" aria-label="Mobile">
             {localizedNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-slate-700"
+                className="text-sm font-medium text-[var(--vp-muted)]"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}

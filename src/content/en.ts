@@ -40,27 +40,27 @@ export const en: LocaleContent = {
       title: "Product categories",
       items: {
         cooling: {
-          title: "Cooling — Air Conditioners",
+          listTitle: "Cooling",
           description: "Energy-efficient systems tailored for commercial environments."
         },
         bathroom: {
-          title: "Bathroom — Ceramic Toilets & Basins",
+          listTitle: "Bathroom Solutions",
           description: "Durable fixtures engineered for high-traffic facilities."
         },
         kitchen: {
-          title: "Kitchen Cabinets",
+          listTitle: "Kitchen Solutions",
           description: "Modern storage solutions with dependable finishes."
         },
         flooring: {
-          title: "Flooring",
+          listTitle: "Flooring",
           description: "Versatile surfaces that perform under heavy use."
         },
         panels: {
-          title: "Panels",
+          listTitle: "Panels",
           description: "Architectural wall and ceiling panels with clean lines."
         },
         pet: {
-          title: "Pet Products — Pet Food",
+          listTitle: "Pet Products",
           description: "Trusted nutrition and accessories for pet-focused brands."
         }
       }
@@ -80,7 +80,7 @@ export const en: LocaleContent = {
       }
     ],
     cta: {
-      title: "Request a quote",
+      title: "Request a quote?",
       button: "Contact Us"
     }
   },
@@ -114,30 +114,31 @@ export const en: LocaleContent = {
   },
   about: {
     title: "About Vista Point",
-    mission: "To simplify procurement for growing businesses with trusted global partners.",
-    vision: "To be the most dependable B2B sourcing partner for essential interior and lifestyle categories.",
-    whyChoose: "We combine category expertise with a service-first mindset to support your brand promise.",
-    values: [
-      {
-        title: "Transparency",
-        description: "Clear communication and proactive updates at every step."
-      },
-      {
-        title: "Accountability",
-        description: "We own the details and deliver against agreed milestones."
-      },
-      {
-        title: "Partnership",
-        description: "Collaborative planning to help you scale with confidence."
-      },
-      {
-        title: "Innovation",
-        description: "Continuous improvement in sourcing and logistics practices."
-      }
+    subtitle:
+      "We help growing businesses source reliable products across key building and lifestyle categories — with clear communication, consistent quality, and dependable delivery.",
+    whoWeAreTitle: "Who we are",
+    whoWeAreBody:
+      "Vista Point is a business-to-business supplier focused on practical, modern solutions for commercial and residential projects. We combine category expertise with a straightforward process — so you can select products faster, reduce risk, and keep projects moving.",
+    whatWeDoTitle: "What we do",
+    whatWeDoBody:
+      "We support procurement across multiple product groups, from cooling systems and bathroom solutions to kitchen solutions, flooring, panels, and selected pet products. Whether you need a single category or a complete bundle, we help align specifications, finishes, and logistics to your requirements.",
+    howWeWorkTitle: "How we work",
+    howWeWorkItems: [
+      "Curated product options that fit the scope of your project",
+      "Vendor and quality checks before delivery",
+      "Transparent timelines and responsive support",
+      "Documentation-ready communication for teams and stakeholders"
     ],
-    cta: "Contact Us"
+    whatToExpectTitle: "What you can expect",
+    whatToExpectItems: [
+      "Quality-focused sourcing",
+      "Reliable supply planning",
+      "Specialist guidance from inquiry to delivery"
+    ],
+    ctaLine: "Tell us what you’re sourcing — we’ll respond with options and next steps.",
+    ctaPrimary: "View Products",
+    ctaSecondary: "Contact Us"
   },
-
   whyUs: {
     title: "Why Vista Point",
     intro:
@@ -145,37 +146,54 @@ export const en: LocaleContent = {
     blocks: [
       {
         title: "Quality-first selection",
-        body:
-          "We vet product options for performance, finish consistency, and suitability for real-world use — so decisions are easier and outcomes are predictable."
+        body: "We vet product options for performance, finish consistency, and suitability for real-world use — so decisions are easier and outcomes are predictable."
       },
       {
         title: "Reliable supply, fewer surprises",
-        body:
-          "We prioritize stable sourcing and clear timelines. If something changes, you’ll know early — with alternatives that keep your project on track."
+        body: "We prioritize stable sourcing and clear timelines. If something changes, you’ll know early — with alternatives that keep your project on track."
       },
       {
         title: "Expert support, not sales pressure",
-        body:
-          "You get practical guidance on specifications, compatibility, and trade-offs — without pushing you into the wrong choice."
+        body: "You get practical guidance on specifications, compatibility, and trade-offs — without pushing you into the wrong choice."
       },
       {
         title: "One partner across categories",
-        body:
-          "Cooling, bathroom solutions, kitchen solutions, flooring, panels, and more — organized through one process, one point of contact."
+        body: "Cooling, bathroom solutions, kitchen solutions, flooring, panels, and more — organized through one process, one point of contact."
       }
     ],
     listTitle: "What this means for you",
-    listItems: [
-      "Faster decisions",
-      "Clearer specifications",
-      "More dependable delivery",
-      "Less coordination overhead"
-    ],
-    ctaLine:
-      "Request a quote or ask for product options — we’ll reply with the next steps.",
+    listItems: ["Faster decisions", "Clearer specifications", "More dependable delivery", "Less coordination overhead"],
+    ctaLine: "Request a quote or ask for product options. We’ll reply with the next steps.",
     ctaButton: "Contact Us"
   },
-
+  vision: {
+    title: "Our Vision",
+    intro:
+      "To make B2B sourcing simpler: fewer delays, clearer choices, and products that match expectations when they arrive.",
+    blocks: [
+      {
+        title: "Built for modern procurement",
+        body: "We believe sourcing should be transparent and structured — with clear specifications, consistent communication, and documentation-ready workflows."
+      },
+      {
+        title: "Consistency across categories",
+        body: "From technical systems to finish materials, we aim to provide cohesive product selections that work together — aesthetically and operationally."
+      },
+      {
+        title: "Partnership over transactions",
+        body: "Our goal is to support long-term supply needs: growing companies, expanding operations, and teams that need a dependable partner."
+      }
+    ],
+    principlesTitle: "Principles",
+    principles: [
+      "Clarity over complexity",
+      "Reliability over promises",
+      "Quality that scales",
+      "Support that stays responsive"
+    ],
+    ctaPrimary: "View Products",
+    ctaSecondary: "Contact Us"
+  },
   contact: {
     title: "Contact Us",
     lead: "Tell us about your project and we will respond promptly.",
@@ -189,31 +207,31 @@ export const en: LocaleContent = {
   },
   categoryPages: {
     cooling: {
-      title: "Cooling — Air Conditioners",
+      pageTitle: "Air Conditioners",
       intro: "Commercial-grade systems engineered for consistent indoor comfort."
     },
     bathroom: {
-      title: "Bathroom — Ceramic Toilets & Basins",
+      pageTitle: "Bathroom Solutions",
       intro: "Reliable ceramics and fittings designed for everyday durability."
     },
     kitchen: {
-      title: "Kitchen Cabinets",
+      pageTitle: "Kitchen Cabinets",
       intro: "Flexible cabinet programs to match modern project requirements.",
       paletteLabel: "Palette",
       productLabel: "Actual product"
     },
     flooring: {
-      title: "Flooring",
+      pageTitle: "Flooring",
       intro: "Surfaces built for longevity, safety, and easy maintenance.",
       paletteLabel: "Palette",
       productLabel: "Actual product"
     },
     panels: {
-      title: "Panels",
+      pageTitle: "Panels",
       intro: "Clean-lined panel systems with adaptable finishes."
     },
     pet: {
-      title: "Pet Products — Pet Food",
+      pageTitle: "Pet Products — Pet Food",
       intro: "Trusted sourcing for nutrition, accessories, and retail-ready packaging."
     },
     benefits: ["Efficiency", "Durability", "Compliance"],

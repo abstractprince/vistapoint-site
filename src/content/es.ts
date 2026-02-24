@@ -34,34 +34,34 @@ export const es: LocaleContent = {
       subtitle: "Experiencia B2B para empresas en crecimiento.",
       primaryCta: "Ver productos",
       secondaryCta: "Contactar",
-      heroLabel: "Imagen de fondo del héroe"
+      heroLabel: "Imagen de fondo principal"
     },
     categories: {
       title: "Categorías de productos",
       items: {
         cooling: {
-          title: "Climatización — aires acondicionados",
+          listTitle: "Climatización",
           description: "Sistemas eficientes diseñados para entornos comerciales."
         },
         bathroom: {
-          title: "Baño — inodoros y lavabos cerámicos",
+          listTitle: "Soluciones para baño",
           description: "Accesorios duraderos para espacios de alto tráfico."
         },
         kitchen: {
-          title: "Gabinetes de cocina",
-          description: "Soluciones modernas de almacenamiento con acabados fiables."
+          listTitle: "Soluciones de cocina",
+          description: "Opciones modernas de almacenamiento con acabados confiables."
         },
         flooring: {
-          title: "Pisos",
-          description: "Superficies versátiles que rinden bajo uso intensivo."
+          listTitle: "Pisos",
+          description: "Superficies versátiles para uso intensivo."
         },
         panels: {
-          title: "Paneles",
+          listTitle: "Paneles",
           description: "Paneles arquitectónicos con líneas limpias."
         },
         pet: {
-          title: "Productos para mascotas — alimentos",
-          description: "Nutrición y accesorios confiables para marcas de mascotas."
+          listTitle: "Productos para mascotas",
+          description: "Nutrición y accesorios confiables para marcas del sector."
         }
       }
     },
@@ -80,13 +80,13 @@ export const es: LocaleContent = {
       }
     ],
     cta: {
-      title: "Solicitar cotización",
+      title: "¿Solicitar cotización?",
       button: "Contactar"
     }
   },
   products: {
     title: "Nuestras categorías de productos",
-    lead: "Selecciones cuidadas para ofrecer experiencias confiables en cada industria.",
+    lead: "Selecciones cuidadas para ofrecer resultados confiables en cada industria.",
     cta: "Contactar"
   },
   services: {
@@ -95,7 +95,7 @@ export const es: LocaleContent = {
     cards: [
       {
         title: "Abastecimiento",
-        description: "Selección de proveedores por rendimiento, precio y disponibilidad."
+        description: "Selección de proveedores por rendimiento, costo y disponibilidad."
       },
       {
         title: "Logística",
@@ -113,107 +113,130 @@ export const es: LocaleContent = {
     cta: "Contactar"
   },
   about: {
-    title: "Acerca de Vista Point",
-    mission: "Simplificar compras para empresas en crecimiento con socios confiables.",
-    vision: "Ser el socio B2B más confiable en categorías esenciales de interior y estilo de vida.",
-    whyChoose: "Combinamos experiencia y servicio para respaldar su promesa de marca.",
-    values: [
-      {
-        title: "Transparencia",
-        description: "Comunicación clara y actualizaciones proactivas."
-      },
-      {
-        title: "Responsabilidad",
-        description: "Nos adueñamos de los detalles y los plazos."
-      },
-      {
-        title: "Colaboración",
-        description: "Planificación conjunta para escalar con confianza."
-      },
-      {
-        title: "Innovación",
-        description: "Mejora continua en abastecimiento y logística."
-      }
+    title: "Sobre Vista Point",
+    subtitle:
+      "Ayudamos a empresas en crecimiento a abastecerse de productos confiables en categorías clave de construcción y estilo de vida, con comunicación clara, calidad consistente y entregas seguras.",
+    whoWeAreTitle: "Quiénes somos",
+    whoWeAreBody:
+      "Vista Point es un proveedor B2B centrado en soluciones prácticas y modernas para proyectos comerciales y residenciales. Combinamos experiencia por categoría con un proceso directo para que usted seleccione más rápido, reduzca riesgos y mantenga el ritmo del proyecto.",
+    whatWeDoTitle: "Qué hacemos",
+    whatWeDoBody:
+      "Apoyamos compras en múltiples grupos de productos: sistemas de climatización, soluciones para baño, soluciones de cocina, pisos, paneles y productos seleccionados para mascotas. Ya sea una categoría o un paquete completo, alineamos especificaciones, acabados y logística con sus requisitos.",
+    howWeWorkTitle: "Cómo trabajamos",
+    howWeWorkItems: [
+      "Opciones de producto curadas para el alcance de su proyecto",
+      "Verificación de proveedor y calidad antes de la entrega",
+      "Plazos transparentes y soporte ágil",
+      "Comunicación lista para documentación de equipos y partes interesadas"
     ],
-    cta: "Contactar"
+    whatToExpectTitle: "Qué puede esperar",
+    whatToExpectItems: [
+      "Abastecimiento con foco en calidad",
+      "Planificación de suministro confiable",
+      "Guía especializada desde la consulta hasta la entrega"
+    ],
+    ctaLine: "Cuéntenos qué está buscando y responderemos con opciones y próximos pasos.",
+    ctaPrimary: "Ver productos",
+    ctaSecondary: "Contactar"
   },
-
   whyUs: {
     title: "Por qué Vista Point",
     intro:
-      "Cuando abastece varias categorías, el costo de la incertidumbre es alto. Nos enfocamos en lo esencial que protege su cronograma: calidad, claridad y fiabilidad.",
+      "Cuando usted compra en varias categorías, el costo de la incertidumbre es alto. Nos enfocamos en lo esencial para proteger su cronograma: calidad, claridad y confiabilidad.",
     blocks: [
       {
         title: "Selección con foco en calidad",
-        body:
-          "Evaluamos opciones por rendimiento, consistencia de acabados y adecuación al uso real — para decisiones más simples y resultados previsibles."
+        body: "Evaluamos opciones por desempeño, consistencia de acabado y adecuación al uso real para facilitar decisiones y lograr resultados predecibles."
       },
       {
         title: "Suministro confiable, menos sorpresas",
-        body:
-          "Priorizamos abastecimiento estable y plazos claros. Si algo cambia, lo sabrá a tiempo — con alternativas que mantienen su proyecto en marcha."
+        body: "Priorizamos abastecimiento estable y cronogramas claros. Si algo cambia, usted lo sabrá temprano junto con alternativas para mantener el proyecto en curso."
       },
       {
         title: "Soporte experto, sin presión comercial",
-        body:
-          "Recibe orientación práctica sobre especificaciones, compatibilidad y trade-offs — sin empujarle a una elección equivocada."
+        body: "Recibe guía práctica sobre especificaciones, compatibilidad y compensaciones sin empujarlo a una decisión incorrecta."
       },
       {
-        title: "Un socio para varias categorías",
-        body:
-          "Climatización, soluciones para baño, cocina, pisos, paneles y más — organizado con un solo proceso y un único punto de contacto."
+        title: "Un solo aliado para varias categorías",
+        body: "Climatización, soluciones para baño, soluciones de cocina, pisos, paneles y más, organizados con un proceso y un punto de contacto."
       }
     ],
     listTitle: "Qué significa para usted",
     listItems: [
       "Decisiones más rápidas",
       "Especificaciones más claras",
-      "Entregas más predecibles",
-      "Menos carga de coordinación"
+      "Entregas más confiables",
+      "Menor carga de coordinación"
     ],
-    ctaLine:
-      "Solicite una cotización o pida opciones de producto — responderemos con los próximos pasos.",
+    ctaLine: "Solicite una cotización o pida opciones de producto. Le enviaremos los siguientes pasos.",
     ctaButton: "Contactar"
   },
-
+  vision: {
+    title: "Nuestra visión",
+    intro:
+      "Hacer más simple el abastecimiento B2B: menos retrasos, decisiones más claras y productos que cumplan expectativas al llegar.",
+    blocks: [
+      {
+        title: "Diseñado para compras modernas",
+        body: "Creemos que el abastecimiento debe ser transparente y estructurado, con especificaciones claras, comunicación consistente y flujos listos para documentación."
+      },
+      {
+        title: "Consistencia entre categorías",
+        body: "Desde sistemas técnicos hasta materiales de acabado, buscamos selecciones coherentes que funcionen juntas tanto en estética como en operación."
+      },
+      {
+        title: "Alianza por encima de transacciones",
+        body: "Nuestro objetivo es apoyar necesidades de suministro de largo plazo para empresas en crecimiento y equipos que requieren un socio confiable."
+      }
+    ],
+    principlesTitle: "Principios",
+    principles: [
+      "Claridad sobre complejidad",
+      "Confiabilidad sobre promesas",
+      "Calidad que escala",
+      "Soporte siempre ágil"
+    ],
+    ctaPrimary: "Ver productos",
+    ctaSecondary: "Contactar"
+  },
   contact: {
     title: "Contacto",
-    lead: "Cuéntenos sobre su proyecto y responderemos pronto.",
+    lead: "Compártanos su proyecto y responderemos pronto.",
     form: {
       name: "Nombre",
       email: "Correo",
       message: "Mensaje",
       submit: "Enviar"
     },
-    detailsTitle: "Detalles de contacto"
+    detailsTitle: "Datos de contacto"
   },
   categoryPages: {
     cooling: {
-      title: "Climatización — aires acondicionados",
+      pageTitle: "Aires acondicionados",
       intro: "Sistemas comerciales diseñados para confort constante."
     },
     bathroom: {
-      title: "Baño — inodoros y lavabos cerámicos",
-      intro: "Cerámica confiable y herrajes para el uso diario."
+      pageTitle: "Soluciones para baño",
+      intro: "Cerámica confiable y herrajes para uso diario."
     },
     kitchen: {
-      title: "Gabinetes de cocina",
+      pageTitle: "Gabinetes de cocina",
       intro: "Programas flexibles para requisitos modernos.",
       paletteLabel: "Paleta",
       productLabel: "Producto real"
     },
     flooring: {
-      title: "Pisos",
+      pageTitle: "Pisos",
       intro: "Superficies para durabilidad, seguridad y fácil mantenimiento.",
       paletteLabel: "Paleta",
       productLabel: "Producto real"
     },
     panels: {
-      title: "Paneles",
+      pageTitle: "Paneles",
       intro: "Sistemas de paneles con acabados adaptables."
     },
     pet: {
-      title: "Productos para mascotas — alimentos",
+      pageTitle: "Productos para mascotas — alimentos",
       intro: "Abastecimiento confiable para nutrición y accesorios."
     },
     benefits: ["Eficiencia", "Durabilidad", "Cumplimiento"],

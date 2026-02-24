@@ -8,7 +8,7 @@ export default function KitchenPage({ params }: { params: { locale: Locale } }) 
   return (
     <CategoryPageTemplate
       locale={params.locale}
-      title={content.categoryPages.kitchen.title}
+      title={content.categoryPages.kitchen.pageTitle}
       intro={content.categoryPages.kitchen.intro}
       paletteLabel={content.categoryPages.kitchen.paletteLabel}
       productLabel={content.categoryPages.kitchen.productLabel}

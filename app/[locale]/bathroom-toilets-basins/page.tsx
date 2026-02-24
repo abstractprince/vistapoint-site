@@ -8,7 +8,7 @@ export default function BathroomPage({ params }: { params: { locale: Locale } })
   return (
     <CategoryPageTemplate
       locale={params.locale}
-      title={content.categoryPages.bathroom.title}
+      title={content.categoryPages.bathroom.pageTitle}
       intro={content.categoryPages.bathroom.intro}
     />
   );

@@ -10,10 +10,10 @@ export default function ProductsPage({ params }: { params: { locale: Locale } })
   return (
     <section className="section-spacing">
       <div className="container-base">
-        <h1 className="text-3xl font-semibold text-slate-900 md:text-4xl">
+        <h1 className="text-3xl font-semibold text-[var(--vp-text)] md:text-4xl">
           {content.products.title}
         </h1>
-        <p className="mt-4 max-w-2xl text-base text-slate-600">
+        <p className="mt-4 max-w-2xl text-base text-[var(--vp-muted)]">
           {content.products.lead}
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -22,7 +22,7 @@ export default function ProductsPage({ params }: { params: { locale: Locale } })
               key={item.key}
               href={localePath(params.locale, item.path)}
               imageLabel="Category Image"
-              title={content.home.categories.items[item.key].title}
+              title={content.home.categories.items[item.key].listTitle}
               description={content.home.categories.items[item.key].description}
               footer={content.productsCategoryCard.descriptionSuffix}
             />
@@ -31,7 +31,7 @@ export default function ProductsPage({ params }: { params: { locale: Locale } })
         <div className="mt-12">
           <Link
             href={localePath(params.locale, "/contact")}
-            className="rounded-full bg-[var(--vp-blue)] px-6 py-3 text-sm font-semibold text-white"
+            className="rounded-full bg-[var(--vp-text)] px-6 py-3 text-sm font-semibold text-white"
           >
             {content.products.cta}
           </Link>
