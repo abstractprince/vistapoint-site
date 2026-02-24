@@ -13,17 +13,18 @@ const GALLERY = [
 
 export default function CoolingPage({ params }: { params: { locale: Locale } }) {
   const content = getContent(params.locale);
+  const page = content.categoryPages.cooling;
 
   return (
     <>
       <section className="section-spacing">
         <div className="container-base">
           <h1 className="text-3xl font-semibold text-[var(--vp-text)] md:text-4xl">
-            {content.categoryPages.cooling.title}
+            {page.pageTitle}
           </h1>
 
           <p className="mt-4 max-w-3xl text-base text-[var(--vp-muted)]">
-            {content.categoryPages.cooling.intro}
+            {page.intro}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -47,26 +48,13 @@ export default function CoolingPage({ params }: { params: { locale: Locale } }) 
             <div className="relative min-h-[260px] md:min-h-[420px]">
               <Image
                 src={HERO_SRC}
-                alt={content.categoryPages.cooling.title}
+                alt={page.pageTitle}
                 fill
                 priority
                 sizes="(max-width: 1080px) 100vw, 1080px"
                 className="object-cover"
               />
             </div>
-          </div>
-
-          {/* BENEFITS */}
-          <h2 className="mt-12 text-2xl font-semibold text-[var(--vp-text)]">Benefits</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {content.categoryPages.benefits.map((b) => (
-              <div
-                key={b}
-                className="rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-card)] p-6"
-              >
-                <p className="text-sm font-semibold text-[var(--vp-text)]">{b}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -87,12 +75,30 @@ export default function CoolingPage({ params }: { params: { locale: Locale } }) 
                 <div className="relative min-h-[180px]">
                   <Image
                     src={src}
-                    alt={`${content.categoryPages.cooling.title} — gallery ${idx + 1}`}
+                    alt={`${page.pageTitle} — gallery ${idx + 1}`}
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BENEFITS */}
+      <section className="section-spacing">
+        <div className="container-base">
+          <h2 className="text-2xl font-semibold text-[var(--vp-text)]">Benefits</h2>
+
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {content.categoryPages.benefits.map((b) => (
+              <div
+                key={b}
+                className="rounded-[var(--vp-radius)] border border-[var(--vp-border)] bg-[var(--vp-card)] p-6"
+              >
+                <p className="text-sm font-semibold text-[var(--vp-text)]">{b}</p>
               </div>
             ))}
           </div>
@@ -105,6 +111,7 @@ export default function CoolingPage({ params }: { params: { locale: Locale } }) 
           <h2 className="text-2xl font-semibold text-[var(--vp-text)]">
             {content.categoryPages.bottomCtaTitle}
           </h2>
+
           <Link
             href={localePath(params.locale, "/contact")}
             className="rounded-full bg-[var(--vp-text)] px-6 py-3 text-sm font-semibold text-white"
